@@ -16,7 +16,7 @@ class ManajerRuagan:
 
 class Ruangan:
     def cek_status(self):
-        return self.status
+        pass
     def tandai_dipakai():
         pass
     def tandai_kosong():
