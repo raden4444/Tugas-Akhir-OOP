@@ -1,6 +1,5 @@
 from datetime import datetime
 
-
 class Ruangan:
     def __init__(self, kode, nama):
         self.kode = kode
@@ -29,7 +28,7 @@ class Jadwal:
     def cek_jadwal(self, waktu):
         return self.mulai <= waktu < self.selesai
 
-
+#DEBUGGING
 kelas_a = Ruangan("A101", "Ruang A101")
 
 jadwal = Jadwal(
