@@ -1,21 +1,25 @@
 from datetime import datetime
 
+class ManajerRuagan:
+    def __init__(self,)
+        pass
+    def cari_ruangan_kosong(waktu):
+        pass
+    def ajukan_peminjaman(pemohon, data):
+        pass
+    def check_in(pengguna, jadwal):
+        pass
+    def check_out(penggunaan):
+        pass
+    def kirim_notifikasi_jadwal:
+
+
 class Ruangan:
-    def __init__(self, kode, nama):
-        self.kode = kode
-        self.nama = nama
-        self.status = "Kosong"
-
-    def mulai_penggunaan(self):
-        self.status = "Dipakai"
-        print(f"{self.nama} sekarang sedang dipakai.")
-
-    def akhiri_penggunaan(self):
-        self.status = "Kosong"
-        print(f"{self.nama} sekarang kosong.")
-
     def cek_status(self):
         return self.status
+    def tandai_dipakai():
+        pass
+    def tandai_kosong():
 
 
 class Jadwal:
@@ -25,15 +29,23 @@ class Jadwal:
         self.mulai = mulai
         self.selesai = selesai
 
-    def cek_jadwal(self, waktu):
-        return self.mulai <= waktu < self.selesai
+    def bentrok_dengan():
+        pass
 
-#DEBUGGING
-kelas_a = Ruangan("A101", "Ruang A101")
 
-jadwal = Jadwal(
-    kelas_a,
-    "Pemrograman Berorientasi Objek",
-    datetime(2026, 10, 27, 8, 0),
-    datetime(2026, 10, 27, 10, 0)
-)
+class Peminjaman:
+    def ajukan():
+        pass
+    def batalkan():
+        pass
+
+
+class PenggunaanRuangan:
+    def check_out():
+        pass
+    def masih_aktif():
+        pass
+        
+
+        
+
