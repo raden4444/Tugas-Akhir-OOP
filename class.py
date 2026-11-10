@@ -23,15 +23,12 @@ class Ruangan:
 
 
 class Jadwal:
-    def __init__(self, ruangan, mata_kuliah, mulai, selesai):
-        self.ruangan = ruangan
-        self.mata_kuliah = mata_kuliah
-        self.mulai = mulai
-        self.selesai = selesai
-
+    def __init__(self, ):
+        pass
     def bentrok_dengan():
         pass
     get_deksripsi()
+
 
 class JadwalKuliah:
     get_deskripsi()
