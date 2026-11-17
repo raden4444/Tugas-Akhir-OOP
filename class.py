@@ -189,7 +189,6 @@ class Peminjaman(jadwal)
         return True
 
     def batalkan(self):
-        # Hanya bisa dibatalkan selama masih menunggu keputusan admin
         if self.status == StatusPeminjaman.MENUNGGU:
             self.status = StatusPeminjaman.DIBATALKAN
             return True
