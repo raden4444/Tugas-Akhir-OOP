@@ -169,14 +169,42 @@ class Jadwal:
         )
 
 
-class Peminjaman:
-    def ajukan():
-        pass
-    def batalkan():
-        pass
-    get_deskripsi():
+class Peminjaman(jadwal)
+    def __init__(
+        self,
+        id_jadwal,
+        waktu_mulai,
+        waktu_selesai,
+        ruangan,
+        keperluan,
+        pemohon
+    ):
+        super().__init__(id_jadwal, waktu_mulai, waktu_selesai, ruangan)
+        self.keperluan = keperluan
+        self.status = StatusPeminjaman.MENUNGGU
+        self.pemohon = pemohon
 
+    def ajukan(self):
+        self.status = StatusPeminjaman.MENUNGGU
+        return True
 
+    def batalkan(self):
+        # Hanya bisa dibatalkan selama masih menunggu keputusan admin
+        if self.status == StatusPeminjaman.MENUNGGU:
+            self.status = StatusPeminjaman.DIBATALKAN
+            return True
+
+        return False
+
+    def get_deskripsi(self):
+        return (
+            f"{super().get_deskripsi()}\n"
+            f"Keperluan: {self.keperluan}\n"
+            f"Pemohon: {self.pemohon.nama}\n"
+            f"Status: {self.status.value}"
+        )
+
+   
 class PenggunaanRuangan:
     def check_out():
         pass
